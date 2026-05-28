@@ -15,7 +15,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Inventory Suite') }}</title>
+        <title>{{ config('app.name', 'SmartStock Pro') }}</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -35,13 +38,15 @@
                 <!-- Sidebar Header -->
                 <div class="h-16 flex items-center px-6 border-b border-gray-100 dark:border-gray-700">
                     <a href="{{ route('dashboard') }}" class="flex items-center space-x-3 overflow-hidden">
-                        <span class="inline-flex p-2 bg-indigo-600 rounded-xl text-white shadow-md shadow-indigo-600/20">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        <span class="inline-flex p-2 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl text-white shadow-lg shadow-indigo-500/25 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" stroke-width="2" opacity="0.7"></path>
                             </svg>
                         </span>
-                        <span x-show="!sidebarCollapsed" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="font-black text-sm text-gray-900 dark:text-white uppercase tracking-wider whitespace-nowrap">
-                            Inventory Suite
+                        <span x-show="!sidebarCollapsed" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="whitespace-nowrap">
+                            <span class="font-black text-sm text-gray-900 dark:text-white tracking-tight block leading-tight">Smart<span class="text-indigo-600 dark:text-indigo-400">Stock</span> Pro</span>
+                            <span class="text-2xs text-gray-400 dark:text-gray-500 font-medium block leading-tight">Inventory System</span>
                         </span>
                     </a>
                 </div>
@@ -102,12 +107,13 @@
                     
                     <div class="h-16 flex items-center justify-between px-6 border-b border-gray-100 dark:border-gray-700">
                         <a href="{{ route('dashboard') }}" class="flex items-center space-x-3">
-                            <span class="inline-flex p-2 bg-indigo-600 rounded-xl text-white shadow-md">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            <span class="inline-flex p-2 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl text-white shadow-lg shadow-indigo-500/25">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" stroke-width="2" opacity="0.7"></path>
                                 </svg>
                             </span>
-                            <span class="font-black text-sm text-gray-900 dark:text-white uppercase tracking-wider">Inventory</span>
+                            <span class="font-black text-sm text-gray-900 dark:text-white tracking-tight">Smart<span class="text-indigo-600 dark:text-indigo-400">Stock</span> Pro</span>
                         </a>
                         <button @click="sidebarOpen = false" class="p-2 rounded-lg text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,6 +291,14 @@
                 <main class="flex-grow p-6 lg:p-8">
                     {{ $slot }}
                 </main>
+
+                <!-- Footer -->
+                <footer class="border-t border-gray-100 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 px-6 py-4">
+                    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 dark:text-gray-500">
+                        <p>&copy; {{ date('Y') }} <span class="font-semibold text-gray-600 dark:text-gray-400">SmartStock Pro</span> — Smart Inventory Management System</p>
+                        <p class="mt-1 sm:mt-0">Built with Laravel & Tailwind CSS</p>
+                    </div>
+                </footer>
             </div>
         </div>
 

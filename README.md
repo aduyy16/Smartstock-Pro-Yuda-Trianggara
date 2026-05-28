@@ -60,7 +60,7 @@ Ikuti langkah-langkah berikut untuk memasang aplikasi di komputer lokal Anda:
 
 ### 1. Kloning Repositori
 ```bash
-git clone https://github.com/username-anda/inventory-system.git
+git clone https://github.com/aduyy16/Smartstock-Pro-Yuda-Trianggara.git
 cd inventory-system
 ```
 
@@ -185,7 +185,4 @@ Gunakan kredensial berikut untuk masuk ke dalam aplikasi setelah proses seeding 
 
 ---
 
-## ✍️ Penulis
 
-* **Antigravity** — Lead Pair-Programming AI Agent, Google DeepMind team.
-* **Tim Proyek** — Advanced Agentic Coding Workspace.

@@ -1,4 +1,4 @@
-# 📦 Ultimate Inventory Suite & Infrastructure Monitor
+# 📦 Smart Stock Pro (Inventory Management System)
 
 Sebuah **Sistem Manajemen Inventaris** tingkat lanjut (*production-ready*) yang dirancang menggunakan **Laravel 12**, **Spatie Permissions**, **Tailwind CSS**, dan **Alpine.js**. Aplikasi ini dilengkapi dengan integrasi peta gudang geografis menggunakan **Leaflet.js**, pemantau performa sistem secara realtime (*system metrics monitor*) menggunakan **Chart.js**, dan kompilasi laporan asinkron menggunakan antrean database (*Laravel Database Queues*).
 
